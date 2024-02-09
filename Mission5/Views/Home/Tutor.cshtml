@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Baking";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4 title">Tutor Charges Calculator</h1>
+        <br />
+    </div>
+
+    <div class="text-center">
+        <h2 class="display-4" style="font-size: 30px !important">Enter the number of hours to calculate tutor price</h2>
+        <br />
+    </div>
+    <br />
+
+    <div class="text-center">
+        <!-- Make form with hourly rate and the non-editable text box-->
+        <form id="calculatorForm">
+            <label style="font-size: 20px" for="hours">Enter the number of hours:</label>
+            <input type="number" id="hours" name="hours" min="0" required />
+
+            <label style="font-size: 20px" for="hourlyRate">Fixed Hourly Rate:</label>
+            <input type="text" id="hourlyRate" name="hourlyRate" value="$30" readonly />
+
+            <button type="button" id="calculateTotalButton">Calculate Total</button>
+
+            <br /> <br />
+            <label style="font-size: 40px" for="total">Total: </label>
+            <ouptut style="font-size: 40px" id="total" read only />
+        </form>
+    </div>
+
+</body>
+</html>
